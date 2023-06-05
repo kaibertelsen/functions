@@ -27,7 +27,9 @@ for (var i = 0;i<days;i++){
 		//opiton
 		dayarray.push(option);
 		}
-	        removeOptions(document.getElementById("dayscelector"));
+	//finne første optimon
+	$('#dayscelector option:not(:first)'). remove();
+	 //removeOptions(document.getElementById("dayscelector"));
 		loadselector(document.getElementById("dayscelector"),dayarray);
 }
 
@@ -38,7 +40,7 @@ for (var i = 0;i<days;i++){
 
 function loadmonth(){
 var montharray = [
-									[1,"Januar"],
+		  [1,"Januar"],
                   [2,"Februar"],
                   [3,"Mars"],
                   [4,"April"],
@@ -86,6 +88,7 @@ function loadselector(selector,options){
  }
 
 function removeOptions(selectElement) {
+	
    var i, L = selectElement.options.length - 1;
    for(i = L; i >= 0; i--) {
       selectElement.remove(i);
