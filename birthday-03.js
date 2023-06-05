@@ -74,7 +74,10 @@ loadselector(document.getElementById("yearselector"),yeararray);
 
 
 function loadselector(selector,options){
-	selector.empty();
+	
+       removeOptions(selector);
+	
+	
 	for(var i = 0; i < options.length; i++) {
     var value = options[i][0];
     var text = options[i][1];
@@ -84,3 +87,11 @@ function loadselector(selector,options){
     selector.appendChild(el);
 		}
  }
+
+function removeOptions(selectElement) {
+   var i, L = selectElement.options.length - 1;
+   for(i = L; i >= 0; i--) {
+      selectElement.remove(i);
+   }
+}
+
