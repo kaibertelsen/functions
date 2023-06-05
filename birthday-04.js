@@ -27,7 +27,7 @@ for (var i = 0;i<days;i++){
 		//opiton
 		dayarray.push(option);
 		}
-	
+	        removeOptions(document.getElementById("dayscelector"));
 		loadselector(document.getElementById("dayscelector"),dayarray);
 }
 
@@ -74,9 +74,6 @@ loadselector(document.getElementById("yearselector"),yeararray);
 
 
 function loadselector(selector,options){
-	
-       removeOptions(selector);
-	
 	
 	for(var i = 0; i < options.length; i++) {
     var value = options[i][0];
