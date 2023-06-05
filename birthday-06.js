@@ -28,9 +28,9 @@ for (var i = 0;i<days;i++){
 		dayarray.push(option);
 		}
 	//finne første optimon
-	$('#dayscelector option:not(:first)'). remove();
-	 //removeOptions(document.getElementById("dayscelector"));
-		loadselector(document.getElementById("dayscelector"),dayarray);
+	$('#dayselector option:not(:first)'). remove();
+	 //removeOptions(document.getElementById("dayselector"));
+		loadselector(document.getElementById("dayselector"),dayarray);
 }
 
 
